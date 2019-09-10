@@ -9,7 +9,7 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-    "gh-pages": "ng build --base-href 'https://leonardobenedeti.github.io/ionic3-swipe-up-component/' --prod && npx ngh --dir=www/"
+    "gh-pages": "ionic build --base-href 'https://leonardobenedeti.github.io/ionic3-swipe-up-component/' --prod && npx ngh --dir=www/"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
