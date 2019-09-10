@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Events } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +7,19 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  drawerOptions: any;
 
+  constructor(public navCtrl: NavController, public events: Events) {
+
+      this.drawerOptions = {
+          handleHeight: 40,
+          thresholdFromBottom: 200,
+          thresholdFromTop: 200,
+          bounceBack: true
+      };
   }
 
+  callDetails(){
+    this.events.publish('open', {dados: "Dados via parametro"});
+  }
 }
